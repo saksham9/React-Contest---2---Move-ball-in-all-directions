@@ -42,7 +42,7 @@ const App = () => {
           top: ballPosition.top
         });
       }
-      console.log(ballPosition);
+      //console.log(ballPosition);
     }),
     []
   );
@@ -69,7 +69,6 @@ const App = () => {
 
   return (
     <div className="playground">
-      <div>{renderChoice}</div>
       <button onClick={reset} className="reset">
         Reset
       </button>

@@ -9,26 +9,26 @@ const App = () => {
     left: "0px",
     top: "0px"
   });
-  useEffect(
-    (document.onkeydown = (event) => {
-      event = event || window.event;
-      //console.log(event.keyCode);
-      if (event.keyCode === 40) {
-        //upArrow
-        setY(y + 5);
-      } else if (event.keyCode === 38) {
-        //downarrow
-        setY(y - 5);
-      } else if (event.keyCode === 37) {
-        //left arrow
-        setX(x - 5);
-      } else if (event.keyCode === 39) {
-        //right arrow
-        setX(x + 5);
-      }
-      //console.log(ballPosition);
-    }),[document.onkeydown]
-  );
+  // useEffect(
+  //   (document.onkeydown = (event) => {
+  //     event = event || window.event;
+  //     //console.log(event.keyCode);
+  //     if (event.keyCode === 40) {
+  //       //upArrow
+  //       setY(y + 5);
+  //     } else if (event.keyCode === 38) {
+  //       //downarrow
+  //       setY(y - 5);
+  //     } else if (event.keyCode === 37) {
+  //       //left arrow
+  //       setX(x - 5);
+  //     } else if (event.keyCode === 39) {
+  //       //right arrow
+  //       setX(x + 5);
+  //     }
+  //     //console.log(ballPosition);
+  //   }),[document.onkeydown]
+  // );
   useEffect(() => {
     setBallPosition({
       left: x + "px",

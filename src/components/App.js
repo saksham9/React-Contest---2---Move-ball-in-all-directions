@@ -36,18 +36,16 @@ const App = () => {
         });
       } else if (event.keyCode === 39) {
         //right arrow
-        setY(x + 5);
+        setX(x + 5);
         setBallPosition({
           left: x + "px",
           top: ballPosition.top
         });
       }
       //console.log(ballPosition);
-    }),
-    []
-  );
+    }));
   const reset = () => {
-    setRenderBall(false);
+    //setRenderBall(false);
     setX(0);
     setY(0);
     setBallPosition({ left: "0px", top: "0px" });
@@ -64,7 +62,7 @@ const App = () => {
         ></div>
       );
     } else
-      return <button onClick={buttonClickHandler} className="Start">Start</button>;
+      return <button onClick={buttonClickHandler} className="ballProvider">Start</button>;
   };
 
   return (

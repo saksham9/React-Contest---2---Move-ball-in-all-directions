@@ -58,7 +58,7 @@ const App = () => {
       return (
         <div
           className="ball"
-          style={{ left: ballPosition.left, top: ballPosition.top }}
+          style={ballPosition}
         ></div>
       );
     } else

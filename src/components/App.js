@@ -48,21 +48,19 @@ const App = () => {
     //setRenderBall(false);
     setX(0);
     setY(0);
-    setBallPosition({ left: "0px", top: "0px" });
   };
-  const buttonClickHandler = () => {
+  const start = () => {
     setRenderBall(true);
   };
   const renderChoice = () => {
     if (renderBall) {
-      return (
-        <div
-          className="ball"
-          style={ballPosition}
-        ></div>
-      );
+      return <div className="ball" style={ballPosition}></div>;
     } else
-      return <button onClick={buttonClickHandler} className="ballProvider">Start</button>;
+      return (
+        <button onClick={start} className="start">
+          Start
+        </button>
+      );
   };
 
   return (

@@ -64,7 +64,7 @@ const App = () => {
         ></div>
       );
     } else
-      return <button onClick={buttonClickHandler}>Click For One Ball</button>;
+      return <button onClick={buttonClickHandler}>Start</button>;
   };
 
   return (

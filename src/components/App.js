@@ -16,39 +16,36 @@ const App = () => {
       if (event.keyCode === 40) {
         //upArrow
         setY(y + 5);
-        setBallPosition({
-          left: ballPosition.left,
-          top: y + "px"
-        });
       } else if (event.keyCode === 38) {
         //downarrow
         setY(y - 5);
-        setBallPosition({
-          left: ballPosition.left,
-          top: y + "px"
-        });
       } else if (event.keyCode === 37) {
         //left arrow
         setX(x - 5);
-        setBallPosition({
-          left: x + "px",
-          top: ballPosition.top
-        });
       } else if (event.keyCode === 39) {
         //right arrow
         setX(x + 5);
-        setBallPosition({
-          left: x + "px",
-          top: ballPosition.top
-        });
       }
       //console.log(ballPosition);
-    }));
+    })
+  );
+  useEffect(() => {
+    setBallPosition({
+      left: x + "px",
+      top: ballPosition.top
+    });
+  }, [x]);
+  useEffect(() => {
+    setBallPosition({
+      left: ballPosition.left,
+      top: y + "px"
+    });
+  }, [y]);
   const reset = () => {
     setRenderBall(false);
     setX(0);
     setY(0);
-    setBallPosition({left:"0px",top:"0px"});
+    setBallPosition({ left: "0px", top: "0px" });
   };
   const start = () => {
     setRenderBall(true);

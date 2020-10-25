@@ -64,7 +64,7 @@ const App = () => {
         ></div>
       );
     } else
-      return <button onClick={buttonClickHandler}>Start</button>;
+      return <button onClick={buttonClickHandler} className="Start">Start</button>;
   };
 
   return (

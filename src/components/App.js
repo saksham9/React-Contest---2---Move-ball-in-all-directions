@@ -45,9 +45,10 @@ const App = () => {
       //console.log(ballPosition);
     }));
   const reset = () => {
-    //setRenderBall(false);
+    setRenderBall(false);
     setX(0);
     setY(0);
+    setBallPosition({left:"0px",top:"0px"});
   };
   const start = () => {
     setRenderBall(true);

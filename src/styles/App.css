@@ -21,6 +21,7 @@ body html .root {
   border: none;
   width: 195px;
   margin: 15px;
+  position: absolute;
   
 
 }
@@ -34,6 +35,7 @@ body html .root {
   border-radius:8px;
   border: none;
   width: 100px;
+  position: absolute;
   
 
 }

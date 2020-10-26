@@ -27,7 +27,7 @@ const App = () => {
         setX(x + 5);
       }
       //console.log(ballPosition);
-    }),[renderBall]
+    }),[]
   );
   useEffect(() => {
     setBallPosition({

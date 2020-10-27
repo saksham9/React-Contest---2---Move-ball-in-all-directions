@@ -1,7 +1,7 @@
 import React, { Component, useState } from "react";
 import "../styles/App.css";
 
-const App = () => {
+function App() {
   const [renderBall, setRenderBall] = useState(false);
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
@@ -9,7 +9,7 @@ const App = () => {
     left: "0px",
     top: "0px"
   });
-  const handler = (event) => {
+  function handler(event){
     event = event || window.event;
     //console.log(event.keyCode);
     if (event.keyCode === 40) {
@@ -44,16 +44,16 @@ const App = () => {
       top: y + "px"
     });
   }, [y]);
-  const reset = () => {
+  function reset  () {
     setRenderBall(false);
     setX(0);
     setY(0);
     setBallPosition({ left: "0px", top: "0px" });
   };
-  const start = () => {
+  function start  () {
     setRenderBall(true);
   };
-  const renderChoice = () => {
+  function renderChoice() {
     if (renderBall) {
       return <div className="ball" style={ballPosition}></div>;
     } else
